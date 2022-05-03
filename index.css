@@ -1,6 +1,6 @@
 body {
-    background: #2c3e50;
-    color: #ecf0f1;
+    background: #0be881;
+    color: #1e272e;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -41,7 +41,7 @@ body {
   } */
   
   svg {
-      fill: #ecf0f1;
+      fill: #1e272e;
   }
   
   #text {
@@ -49,7 +49,7 @@ body {
     font-family: monospace;
     animation: blink .5s step-end infinite alternate;
     padding-right: 0.1em;
-    border-right: 3px solid #ecf0f1;
+    border-right: 3px solid #1e272e;
   }
   
   @keyframes blink {
