@@ -45,8 +45,6 @@
       'Console.WriteLine("Hello World, I am Dennis Kaiser");',
     ];
 
-    window.onload = carousel(texts, "text", 75);
-
     async function typeSentence(sentence, eleRef, delay = 100) {
       const letters = sentence.split("");
       const displayText = [];
@@ -60,20 +58,16 @@
       return;
     }
 
-    async function carousel(carouselList, eleRef, typeDelay) {
-      var i = 0;
-      while (true) {
-        await typeSentence(carouselList[i], eleRef, typeDelay);
-        await waitForMs(1500);
-        document.getElementById(eleRef).innerHTML = " ";
-        await waitForMs(500);
-        i = (i + 1) % carouselList.length;
-      }
+    async function greetTheWorld(greetings, eleRef, typeDelay) {
+      var greeting = greetings[Math.floor(Math.random() * greetings.length)];
+      await typeSentence(greeting, eleRef, typeDelay);
     }
 
     function waitForMs(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     }
+
+    window.onload = greetTheWorld(texts, "text", 75);
   </script>
 </body>
 
